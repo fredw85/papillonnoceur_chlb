@@ -1,4 +1,18 @@
 PapillonnoceurFirst::Application.routes.draw do
+  get "pages/accueil"
+
+  get "pages/presentation"
+
+  get "pages/trajet"
+
+  get "pages/covoiturage"
+
+  get "pages/logement"
+
+  get "pages/liste"
+
+  get "pages/photos"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

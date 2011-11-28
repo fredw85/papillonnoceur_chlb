@@ -1,0 +1,25 @@
+/* Title */
+
+
+
+/* Navigation */
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+nav ul li a {
+  font-weight: bold;
+  padding: 0em 0em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+

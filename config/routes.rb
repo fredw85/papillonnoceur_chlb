@@ -1,17 +1,13 @@
 PapillonnoceurFirst::Application.routes.draw do
-  get "pages/accueil"
 
-  get "pages/presentation"
 
-  get "pages/trajet"
-
-  get "pages/covoiturage"
-
-  get "pages/logement"
-
-  get "pages/liste"
-
-  get "pages/photos"
+  root :to => 'pages#accueil'
+  match '/accueil', :to => 'pages#presentation'
+  match '/presentation', :to => 'pages#trajet'
+  match '/trajet', :to => 'pages#covoiturage'
+  match '/covoiturage', :to => 'pages#logement'
+  match '/logement', :to => 'pages#liste'
+  match '/photos', :to => 'pages#photos'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -9,7 +9,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Papillon Noceur</title>
+  <title><%= title %></title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -23,25 +23,15 @@
 </head>
 
 <body>
-	<header>
-		<h1 id="title">Your title</h1>
-		<nav>
-			<ul>
-				<li><a href="#">Some</a></li>
-				<li><a href="#">navigation</a></li>
-				<li><a href="#">links</a></li>
-			</ul>
-		</nav>
-	</header>
+	<div class="container">
 
-	<section>
+		<%= render 'layouts/header' %>
+
+		
 		<%= yield %>
-	</section>
+		
 
-	<footer>
-		<h3>A nice footer</h3>
-	</footer>
-  
+	</div>
 
   <%= javascript_include_tag "application" %>
 

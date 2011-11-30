@@ -10,20 +10,20 @@
 	</div>
 	<div class="row">
 		<div class="span10">
-		<form class="form-stacked">
-			<div class="clearfix">
-				<label for="start">Entrez votre adresse de départ:</label>
-				<div class="input">
-					<input type="text" id="start" name="start" placeholder="Adresse" class="xlarge">
-					<input type="button" class="btn primary" value="Calculer" onclick="calcRoute();">
+			<form class="form-stacked">
+				<div class="clearfix">
+					<label for="start">Entrez votre adresse de départ:</label>
+					<div class="input">
+						<input type="text" id="start" name="start" placeholder="Adresse" class="span5">
+						<input type="button" class="btn primary" value="Calculer" onclick="calcRoute();">
+					</div>
+					
 				</div>
-				
-			</div>
-		</form>
+			</form>
 		</div>
 	</div>
 	<div class="row">
-		<div id="map_canvas" class="span8" style="height:500px;"></div>
+		<div id="map_canvas" class="span10" style="height:500px;"></div>
 		<div id="directionsPanel" class="span4" style="height:500px;"></div>
 	</div>
 </section>

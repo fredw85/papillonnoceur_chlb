@@ -2,15 +2,12 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 
-group :production do
-  gem 'pg'
-end
-group :development, :test do
-  gem 'sqlite3'
-end
+
+gem 'sqlite3'
+
 
 #for heroku
-gem 'thin'
+
 gem 'heroku'
 
 # Gems used only for assets and not required
@@ -19,14 +16,15 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.5'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'less-rails-bootstrap'
 end
 
 gem 'jquery-rails'
-gem 'less-rails-bootstrap'
+
 gem 'rails-boilerplate'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+#gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
 # gem 'unicorn'

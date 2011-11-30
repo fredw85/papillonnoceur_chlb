@@ -1,6 +1,24 @@
 PapillonnoceurFirst::Application.routes.draw do
 
 
+  get "proposition_covoiturages/new"
+
+  get "proposition_covoiturages/show"
+
+  get "propositions_covoiturage/index"
+
+  get "propositions_covoiturage/show"
+
+  get "propositions_covoiturage/new"
+
+  get "propositions_covoiturage/create"
+
+  get "propositions_covoiturage/edit"
+
+  get "propositions_covoiturage/update"
+
+  get "propositions_covoiturage/destroy"
+
   root :to => 'pages#accueil'
   match '/presentation', :to => 'pages#presentation'
   match '/trajet', :to => 'pages#trajet'

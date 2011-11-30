@@ -1,12 +1,23 @@
 /* Title */
 
+.container {
+  
+}
 
+header h1 {
+  float:right;
+}
 
 /* Navigation */
+
+nav {
+  margin-bottom:24px;
+}
 
 nav ul {
   margin: 0;
   padding: 0;
+  float:right;
 }
 
 nav ul li {

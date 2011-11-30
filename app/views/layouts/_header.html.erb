@@ -1,21 +1,21 @@
 
 <header>
 	<div class="row">
-		<div class="span10">
+		<div class="span9 offset7">
 			<h1><%= title %></h1>
 		</div>
 	</div>
 	<div class="row">
-		<div class="span9">	
+		<div class="span8 offset8">	
 			<nav>
 				<ul>
-					<li><a href="#">Infos pratiques</a></li>
-					<li><a href="#">Présentation</a></li>
-					<li><a href="#">Trajet</a></li>
-					<li><a href="#">Covoiturage</a></li>
-					<li><a href="#">Logement</a></li>
-					<li><a href="#">Liste</a></li>
-					<li><a href="#">Photos</a></li>
+					<li><%= link_to "Infos pratiques", root_path %></li>
+					<li><%= link_to "Présentation", presentation_path %></li>
+					<li><%= link_to "Trajet", trajet_path %></li>
+					<li><%= link_to "Covoiturage", covoiturage_path %></li>
+					<li><%= link_to "Logement", logement_path %></li>
+					<li><%= link_to "Liste", liste_path %></li>
+					<li><%= link_to "Photos", photos_path %></li>
 				</ul>
 			</nav>
 		</div>

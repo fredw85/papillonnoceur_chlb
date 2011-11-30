@@ -2,11 +2,11 @@ PapillonnoceurFirst::Application.routes.draw do
 
 
   root :to => 'pages#accueil'
-  match '/accueil', :to => 'pages#presentation'
-  match '/presentation', :to => 'pages#trajet'
-  match '/trajet', :to => 'pages#covoiturage'
-  match '/covoiturage', :to => 'pages#logement'
-  match '/logement', :to => 'pages#liste'
+  match '/presentation', :to => 'pages#presentation'
+  match '/trajet', :to => 'pages#trajet'
+  match '/covoiturage', :to => 'pages#covoiturage'
+  match '/logement', :to => 'pages#logement'
+  match '/liste', :to => 'pages#liste'
   match '/photos', :to => 'pages#photos'
 
   # The priority is based upon order of creation:

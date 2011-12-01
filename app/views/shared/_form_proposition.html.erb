@@ -1,0 +1,21 @@
+<%= form_for @proposition_covoiturage do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="input">
+    <%= f.text_field :depart %>
+  </div>
+  <div class="input">
+    <%= f.number_field :places %>
+  </div>
+  <div class="input">
+    <%= f.text_field :name %>
+  </div>
+  <div class="input">
+    <%= f.email_field :email %>
+  </div>
+  <div class="input">
+    <%= f.telephone_field :telephone %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Poster" %>
+  </div>
+<% end %>

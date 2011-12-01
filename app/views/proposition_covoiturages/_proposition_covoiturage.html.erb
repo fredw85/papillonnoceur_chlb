@@ -1,0 +1,22 @@
+
+	<div class="proposition">
+		<div class="depart">
+			Départ: <%= proposition_covoiturage.depart %> 
+		</div>
+		<div class="places">
+			Places: <%= proposition_covoiturage.places %>
+		</div>
+		<div class="name">
+			<%= proposition_covoiturage.name %>
+		</div>
+		<div class="email">
+			<%= mail_to proposition_covoiturage.email, "Email" %>
+		</div>
+		<div class="telephone">
+			<%= proposition_covoiturage.telephone %>
+		</div>
+		<div class="delete">
+			<%= link_to "delete", proposition_covoiturage, :method => :delete, :confirm => "Etes-vous sûr(e) ?" %>
+		</div>
+	</div>
+

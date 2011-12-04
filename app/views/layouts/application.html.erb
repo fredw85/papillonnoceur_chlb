@@ -28,7 +28,10 @@
 		<%= render 'layouts/header' %>
 
     <% flash.each do |key, value| %>
-          <%= content_tag(:div, value, :class => "flash #{key}") %>
+      <div class="alert-message <%= key %> fade in" data-alert="alert">
+        <a class="close" href="#">×</a>  
+        <%= value %>
+      </div>
     <% end %>
 
 		<%= yield %>

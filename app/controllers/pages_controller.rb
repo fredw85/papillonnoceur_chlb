@@ -17,6 +17,8 @@ class PagesController < ApplicationController
 
   def covoiturage
     @title = "Covoiturage"
+    @proposition_covoiturages = PropositionCovoiturage.all
+    @proposition_covoiturage = PropositionCovoiturage.new
   end
 
   def logement

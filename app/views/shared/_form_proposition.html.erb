@@ -1,21 +1,36 @@
-<%= form_for @proposition_covoiturage do |f| %>
+<%= form_for @proposition_covoiturage, :remote => true do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-  <div class="input">
-    <%= f.text_field :depart %>
+  <div class="clearfix">
+    <%= f.label :depart %>
+    <div class="input">
+      <%= f.text_field :depart %>
+    </div>
   </div>
-  <div class="input">
-    <%= f.number_field :places %>
+  <div class="clearfix">
+    <%= f.label :places %>
+    <div class="input">
+      <%= f.number_field :places %>
+    </div>
   </div>
-  <div class="input">
-    <%= f.text_field :name %>
+  <div class="clearfix">
+    <%= f.label :name, "Nom" %>
+    <div class="input">
+      <%= f.text_field :name %>
+    </div>
+ </div>
+  <div class="clearfix">
+    <%= f.label :email %>
+    <div class="input">
+      <%= f.email_field :email %>
+    </div>
   </div>
-  <div class="input">
-    <%= f.email_field :email %>
-  </div>
-  <div class="input">
-    <%= f.telephone_field :telephone %>
+  <div class="clearfix">
+    <%= f.label :telephone %>
+    <div class="input">
+      <%= f.telephone_field :telephone %>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit "Poster" %>
+    <%= f.submit "Poster", :class => "btn primary" %>
   </div>
 <% end %>

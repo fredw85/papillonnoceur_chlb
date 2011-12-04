@@ -1,10 +1,10 @@
 PapillonnoceurFirst::Application.routes.draw do
-  resources :proposition_covoiturages, :only => [:index,:create,:update,:destroy]
+  resources :proposition_covoiturages#, :only => [:create,:update,:destroy]
 
   root :to => 'pages#accueil'
   match '/presentation', :to => 'pages#presentation'
   match '/trajet', :to => 'pages#trajet'
-  match '/covoiturage', :to => 'proposition_covoiturages#index'
+  match '/covoiturage', :to => 'pages#covoiturage'
   match '/logement', :to => 'pages#logement'
   match '/liste', :to => 'pages#liste'
   match '/photos', :to => 'pages#photos'

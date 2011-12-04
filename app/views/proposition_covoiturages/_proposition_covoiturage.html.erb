@@ -9,14 +9,14 @@
 		<div class="name">
 			<%= proposition_covoiturage.name %>
 		</div>
-		<div class="email">
+		<div class="Envoyer un email">
 			<%= mail_to proposition_covoiturage.email, "Email" %>
 		</div>
 		<div class="telephone">
 			<%= proposition_covoiturage.telephone %>
 		</div>
 		<div class="delete">
-			<%= link_to "delete", proposition_covoiturage, :method => :delete, :confirm => "Etes-vous sûr(e) ?" %>
+			<%= link_to "Supprimer", proposition_covoiturage, :method => :delete, :remote => true, :confirm => "Etes-vous sûr(e) ?", :title => "Supprimer la proposition" %>
 		</div>
 	</div>
 

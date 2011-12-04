@@ -1,1 +1,4 @@
-$("#propositions").html("<%= escape_javascript(render(@proposition_covoiturages)) %>");
+/* render the proposition */
+$("#propositions").append('<%= escape_javascript(render(@proposition_covoiturage)) %>');
+
+

@@ -1,16 +1,15 @@
 # coding: utf-8
 class PropositionCovoituragesController < ApplicationController
   def create
+    @proposition_covoiturages = PropositionCovoiturage.all
   	@proposition_covoiturage = PropositionCovoiturage.new(params[:proposition_covoiturage])
   	if @proposition_covoiturage.save
-      flash[:success] = "Proposition prise en compte!"
-      @proposition_covoiturages = PropositionCovoiturage.all
       respond_to do |format|
-        format.html { redirect_to covoiturage_path }
+        format.html { redirect_to covoiturage_path, :flash => { :success => "Proposition prise en compte!"} }
         format.js
       end
     else
-      render 'pages/accueil'
+      render 'pages/covoiturage'
     end
   end
 
@@ -20,10 +19,9 @@ class PropositionCovoituragesController < ApplicationController
 
   def destroy
   	PropositionCovoiturage.find(params[:id]).destroy
-  	flash[:success] = "Proposition supprimée!" 
     @proposition_covoiturages = PropositionCovoiturage.all
     respond_to do |format|
-      format.html { redirect_to covoiturage_path }
+      format.html { redirect_to covoiturage_path, :flash => { :success => "Proposition supprimée!" } }
       format.js
     end
   end

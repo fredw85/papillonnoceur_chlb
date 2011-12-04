@@ -21,6 +21,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'client_side_validations'
+
 gem 'rails-boilerplate'
 
 # To use ActiveModel has_secure_password

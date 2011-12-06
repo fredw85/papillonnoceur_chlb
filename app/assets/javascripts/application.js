@@ -61,14 +61,16 @@ function validateCovoiturageForm() {
 	
 }
 
-function showForm(div) {
-	div.show();
-}
-function hideForm(div) {
-	div.hide();
-}
+
 
 $(document).ready(function() {
-	$("#proposer-form").hide();
+	//toggle form
+	$("#proposer-button").click(function() {
+		$("#proposer-form, #annuler-button").fadeIn();
+	});
+	$("#annuler-button").click(function() {
+		$("#proposer-form").fadeOut();
+	})
+	//validate form
 	validateCovoiturageForm();
 });

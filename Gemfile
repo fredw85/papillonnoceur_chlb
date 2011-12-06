@@ -21,7 +21,6 @@ end
 
 gem 'jquery-rails'
 
-gem 'client_side_validations'
 
 gem 'rails-boilerplate'
 

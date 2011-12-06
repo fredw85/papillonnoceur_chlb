@@ -4,7 +4,8 @@ class PropositionCovoiturage < ActiveRecord::Base
 
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-	validates :depart, 	:presence => true
+	validates :depart, 	:presence => true,
+						:length => { :maximum => 30 }
 
 	validates :places,	:presence => true,
 						:numericality => { 	:only_integer => true,
@@ -12,7 +13,7 @@ class PropositionCovoiturage < ActiveRecord::Base
 											:lower_than => 7}
 
 	validates :name, 	:presence => true,
-						:length => { :maximum => 50 }
+						:length => { :maximum => 30 }
 
 	validates :email, 	:presence => true,
 						:format => { :with => email_regex },

@@ -8,6 +8,59 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require rails.validations
+//= require jquery.validate
+//= require messages_fr
 //= require_tree .
 
+function validateCovoiturageForm() {
+	var validator = $("#new_proposition_covoiturage").validate({
+		debug:true,
+		rules:{
+			"proposition_covoiturage[depart]": {
+				required:true,
+				maxlength: 30
+			},
+			"proposition_covoiturage[places]": {
+				required:true,
+				range: [1,7]
+			},
+			"proposition_covoiturage[name]":{
+				required:true,
+				maxlength: 30
+			},
+			"proposition_covoiturage[email]":{
+				required:true,
+				email:true
+			},
+			"proposition_covoiturage[telephone]":{
+				required:true,
+				minlength:9,
+				maxlength:15
+			}
+		},
+		errorElement: "span",
+		errorClass: "invalid",
+		successClass: "valid",
+		errorPlacement: function(error,element) {
+			error.addClass("help-inline");
+			error.insertAfter(element);
+		},
+		highlight: function(element,errorClass) {
+			$(element).parent(".input").parent(".clearfix").removeClass("success");
+			$(element).parent(".input").parent(".clearfix").addClass("error");
+		},
+		success: function(succ) {
+			succ.html("ok");
+
+		},
+		unhighlight: function(element,errorClass) {
+			$(element).parent(".input").parent(".clearfix").removeClass("error");
+			$(element).parent(".input").parent(".clearfix").addClass("success");
+		}
+	});
+	
+}
+
+$(document).ready(function() {
+	validateCovoiturageForm();
+});

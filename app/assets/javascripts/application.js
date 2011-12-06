@@ -61,6 +61,14 @@ function validateCovoiturageForm() {
 	
 }
 
+function showForm(div) {
+	div.show();
+}
+function hideForm(div) {
+	div.hide();
+}
+
 $(document).ready(function() {
+	$("#proposer-form").hide();
 	validateCovoiturageForm();
 });

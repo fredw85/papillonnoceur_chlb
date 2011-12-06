@@ -8,8 +8,11 @@
 		<div id="propositions">
 			<%= render @proposition_covoiturages %>
 		</div>
-		<div id="proposer">
+		<div id="proposer-form">
 			<%= render 'shared/form_proposition' %>
+		</div>
+		<div id="proposer-button">
+			<input type="button" value="Proposer" class="btn primary" onclick="showForm($('#proposer-form'));">
 		</div>
 	</div>
 	<div class="span8">

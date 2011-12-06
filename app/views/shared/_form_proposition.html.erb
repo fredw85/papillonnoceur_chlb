@@ -1,7 +1,7 @@
 <%= form_for @proposition_covoiturage, :remote => true, :validate => true do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div class="clearfix">
-    <%= f.label :depart %>
+    <%= f.label :depart, "Départ" %>
     <div class="input">
       <%= f.text_field :depart %>
     </div>
@@ -25,7 +25,7 @@
     </div>
   </div>
   <div class="clearfix">
-    <%= f.label :telephone %>
+    <%= f.label :telephone, "Téléphone" %>
     <div class="input">
       <%= f.telephone_field :telephone %>
     </div>

@@ -2,7 +2,7 @@
 
 module ApplicationHelper
 	def title
-		base_title = "Mariage de Renaud et Stéphanie"
+		base_title = "Mariage de Stéphanie et Renaud"
 		if @title.nil?
 			base_title
 		else

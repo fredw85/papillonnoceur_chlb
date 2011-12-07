@@ -1,0 +1,87 @@
+@import 'twitter/bootstrap/variables';
+
+@brownColor:#40312F;
+@pinkColor:#EB3B46;
+@greyColor:#595959;
+@blueishColor:#9DBDC6;
+
+/***********************
+********** tag *********
+***********************/
+
+body {
+	background:@gray url('/assets/photo-background-1200.jpg') no-repeat top center fixed;
+	background-size:cover;
+}
+
+a {
+	color:@grayLighter;
+	//font-weight:bold;
+	&:hover {
+		color:@grayLighter;
+		text-decoration: underline;
+	}
+}
+
+header h1 {
+  float:right;
+}
+
+nav {
+	//padding-top:10px;
+	ul {
+		float:right;
+		li {
+			margin:0 5px 0 5px;
+			list-style-type: none;
+  			display: inline-block;
+  		}
+	}
+}
+
+/***********************
+********* class ********
+***********************/
+
+.info-mariage {
+	background:url('/assets/transparency-dark.png');
+	margin:10px 0 0 0;
+	padding:18px 10px 0 10px;
+	h1, h2 {
+		color:@grayLighter;
+	}
+	h3 {
+		color:@grayLight;
+	}
+}
+
+.presentation, .trajet {
+	background:url('/assets/transparency-dark.png');
+	margin-top:50px;
+	padding:10px 10px 10px 10px;
+	color:@grayLight;
+	h2 {
+		color:@grayLighter;
+	}
+	label {
+		color:@grayLighter;	
+	}
+	.photo {
+		float:right;
+	}
+	.portrait-chinois {
+		
+	}
+}
+
+
+/***********************
+********** id **********
+***********************/
+
+#messe {
+	margin-top:50px;
+}
+#reception {
+	margin-top:200px;
+}

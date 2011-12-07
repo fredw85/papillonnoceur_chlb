@@ -29,8 +29,4 @@ class PagesController < ApplicationController
     @title = "Liste"
   end
 
-  def photos
-    @title = "Photos"
-  end
-
 end

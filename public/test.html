@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript"
+    src="http://maps.googleapis.com/maps/api/js?sensor=false&language=fr">
+</script>
+<script type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+</script>
+</head>
+<body>
+<script type="text/javascript">
+var logements = [
+		{
+			"name":"Hotel Le puit d'angle",
+			"address":"2, rue des Tilleuls 60240 Chaumont en Vexin", 
+			"web":"www.lepuitdangle.com", 
+			"chambres":5,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"Hotel La grange Saint-Nicolas",
+			"address":"17, rue de la république, 60240 Chaumont en Vexin",
+			"web":"www.hotel-stnicolas.com",
+			"chambres":21,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"Hôtel Golf de Rebetz",
+			"address":"60240 Chaumont en Vexin", 
+			"web":"www.rebetz.com", 
+			"chambres":73,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"Hôtel de Dieppe",
+			"address":" 1, avenue de la gare 27140 Gisors", 
+			"web":" www.chassemar.com", 
+			"chambres":8,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"Hôtel le moderne",
+			"address":" 1 place de la gare 27140 Gisors", 
+			"web":" www.hotel-moderne-gisors.com", 
+			"chambres":34,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"Hôtel château de la Rapée",
+			"address":" La Rapée 27140 Bazincourt sur Epte", 
+			"web":" www.hotelrapee.com", 
+			"chambres":13,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"Hôtel d'Evreux.",
+			"address":" 11 place d'Evreux 27200 Vernon", 
+			"web":" www.hoteldevreux.fr", 
+			"chambres":12,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"Hôtel La chaîne d'or",
+			"address":" 25-27 rue grande 27700 Les Andelys", 
+			"web":" www.hotel-lachainedor.com", 
+			"chambres":12,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"CdH Madame Lethiais",
+			"address":" 4, rue de l'Eglise, 60240 Boubiers", 
+			"chambres":4,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"CdH Madame Trigallez",
+			"address":" 9, rue Houssemagne, 60240 La Villetertre", 
+			"chambres":2,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"CdH Château de Maudétour",
+			"address":"95420 Maudétour-en-Vexin", 
+			"chambres":5,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"CdH Pigeonnier d'Hazeville",
+			"address":"95420 Wy-dit-joli-village", 
+			"chambres":2,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"CdH Chambres du Haras",
+			"address":"24, rue George Joignet, 27660 Bernouville", 
+			"chambres":2,
+			"lat":"",
+			"lng":""
+		},
+		{
+			"name":"CdH Les Tilleuls",
+			"address":" 21 route de Sainte Marie Thierceville. 27140 Bazincourt", 
+			"chambres":4,
+			"lat":"",
+			"lng":""
+		}
+	];
+$(document).ready(function() {
+	$.each(logements, function(i,l) {
+		var url = "http://maps.googleapis.com/maps/api/geocode/xml?address=";
+		url += l.name+l.address;
+		url += "&region=fr";
+		url += "&sensor=false";
+		url += "&callback=?"
+		$.get(url, function(data) {
+			$("#latlng").append("<p>"+data+"</p>");
+		});
+	});	
+});
+</script>
+<div id="latlng">
+</div>
+</body>
+</html>

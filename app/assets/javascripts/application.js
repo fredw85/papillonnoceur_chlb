@@ -66,11 +66,13 @@ function validateCovoiturageForm() {
 $(document).ready(function() {
 	//toggle form
 	$("#proposer-button").click(function() {
-		$("#proposer-form, #annuler-button").fadeIn();
+		$("#proposer-form, #annuler-button").show();
 	});
 	$("#annuler-button").click(function() {
-		$("#proposer-form").fadeOut();
+		$("#proposer-form").hide();
 	})
 	//validate form
-	validateCovoiturageForm();
+	if($("#new_proposition_covoiturage").length>0) {
+		validateCovoiturageForm();
+	}
 });

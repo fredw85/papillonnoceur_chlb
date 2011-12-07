@@ -60,22 +60,24 @@ var logements = [
 			"name":"Hôtel d'Evreux",
 			"address":" 11 place d'Evreux, 27200 Vernon", 
 			"web":" www.hoteldevreux.fr",
-			"telephone":"02 32 21 16 12" 
+			"telephone":"02 32 21 16 12", 
 			"chambres":12,
 			"lat":49.079221,
 			"lng":1.454272
 		},
 		{
-			"name":"Hôtel La chaîne d'or",
+			"name":"Hôtel La Chaîne d'or",
 			"address":"25-27 Rue Grande, 27700 Les Andelys", 
-			"web":" www.hotel-lachainedor.com", 
+			"web":" www.hotel-lachainedor.com",
+			"telephone":"02 32 54 00 31", 
 			"chambres":12,
 			"lat":49.24203090,
 			"lng":1.39935010
 		},
 		{
 			"name":"CdH Madame Lethiais",
-			"address":"4 Rue de l'Église, 60240 Boubiers", 
+			"address":"4 Rue de l'Église, 60240 Boubiers",
+			"telephone":"03 44 49 30 00", 
 			"chambres":4,
 			"lat":49.22148720000001,
 			"lng":1.87339560
@@ -107,7 +109,7 @@ var logements = [
 		{
 			"name":"CdH Chambres du Haras",
 			"address":"24 Rue Georges Joignet, 27660 Bernouville", 
-			"web":"http://chambresduharas.voila.net/",
+			"web":"chambresduharas.voila.net/",
 			"telephone":"02 32 27 38 10",
 			"chambres":2,
 			"lat":49.28782289999999,
@@ -124,15 +126,25 @@ var logements = [
 		}
 	];
 var eglise={
+	"name":"Notre-Dame De Magny En Vexin",
 	"address":"2 rue Saint Sauveur, 95420 Magny-en-Vexin",
 	"lat":49.156548,
 	"lng":1.786458
 };
 var reception={
+	"name":"Château de Serans",
 	"address":"Château de Serans, Grande Rue, 60240 Serans",
 	"lat":49.22836,
 	"lng":1.829224
 };
+var pathToVendorImages='/assets/';
+var iconEglise=pathToVendorImages+'chapel-2.png';
+var iconReception=pathToVendorImages+'bar_coktail.png';
+var iconLogement=pathToVendorImages+'lodging_0star.png';
+
+function placeMarker(map,position,icon,title) {
+	
+}
 
 function initializeTrajet() {
 	directionsDisplay = new google.maps.DirectionsRenderer();
@@ -143,10 +155,22 @@ function initializeTrajet() {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map_trajet"), myOptions);
-    var marker = new google.maps.Marker({
+    var infowindow = new google.maps.InfoWindow();
+    var markerEglise = new google.maps.Marker({
         map: map,
-        position: end
+        position: end,
+        icon: iconEglise
     });
+    google.maps.event.addListener(markerEglise, 'click', (function(markerEglise) {
+        	return function() {
+        		infowindowContent = "<address><strong>"+eglise.name+"</strong><br>";
+    			infowindowContent += "Messe à <br>";
+    			infowindowContent += eglise.address+"<br>";
+    			infowindowContent += "</address>";
+          		infowindow.setContent(infowindowContent);
+          		infowindow.open(map, markerEglise);
+        	}
+      	})(markerEglise));
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 }
@@ -155,28 +179,67 @@ function initializeLogement() {
 	//create map
 	var egl = new google.maps.LatLng(eglise.lat, eglise.lng);
 	var myOptions = {
-      zoom: 8,
+      zoom: 10,
       center: egl,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 	map = new google.maps.Map(document.getElementById("map_logement"), myOptions);
-	//create geocoder
-	var geocoder = new google.maps.Geocoder;
+	var infowindow = new google.maps.InfoWindow();
 	var marker;
-	//geocode each address and mark it on map
+	var latlng;
+	var infowindowContent;
 	$.each(logements, function(i,logement) {
-		//geocode an address
-		geocoder.geocode({address: logement.address, region:'fr'}, function(results,status) {
-			if (status == google.maps.GeocoderStatus.OK) {
-				marker = new google.maps.Marker({
-		        	map: map,
-		        	position: results[0].geometry.location
-		    	});
-		    } else {
-	    		alert("Geocode was not successful for the following reason: " + status);
-	  		}
-		});
+		marker = new google.maps.Marker({
+        	map: map,
+        	position: new google.maps.LatLng(logement.lat,logement.lng),
+        	icon:iconLogement,
+        	title:logement.name
+    	});
+    	
+    	google.maps.event.addListener(marker, 'click', (function(marker) {
+        	return function() {
+        		infowindowContent = "<address><strong>"+logement.name+"</strong><br>";
+    			infowindowContent += logement.address+"<br>";
+    			if(logement.telephone !== undefined){infowindowContent += logement.telephone+"<br>";}
+    			if(logement.web !== undefined){infowindowContent += "<a href='http://"+logement.web+"'>"+logement.web+"</a>";}
+    			infowindowContent += "</address>";
+          		infowindow.setContent(infowindowContent);
+          		infowindow.open(map, marker);
+        	}
+      	})(marker));
 	});
+	var markerEglise = new google.maps.Marker({
+    	map: map,
+    	position: egl,
+    	icon:iconEglise,
+    	title:"Eglise"
+	});
+	google.maps.event.addListener(markerEglise, 'click', (function(markerEglise) {
+        	return function() {
+        		infowindowContent = "<address><strong>"+eglise.name+"</strong><br>";
+    			infowindowContent += "Messe à <br>";
+    			infowindowContent += eglise.address+"<br>";
+    			infowindowContent += "</address>";
+          		infowindow.setContent(infowindowContent);
+          		infowindow.open(map, markerEglise);
+        	}
+      	})(markerEglise));
+	var markerReception = new google.maps.Marker({
+    	map: map,
+    	position: new google.maps.LatLng(reception.lat, reception.lng),
+    	icon:iconReception,
+    	title:"Réception"
+	});
+	google.maps.event.addListener(markerReception, 'click', (function(markerReception) {
+        	return function() {
+        		infowindowContent = "<address><strong>"+reception.name+"</strong><br>";
+    			infowindowContent += "Réception à <br>";
+    			infowindowContent += reception.address+"<br>";
+    			infowindowContent += "</address>";
+          		infowindow.setContent(infowindowContent);
+          		infowindow.open(map, markerReception);
+        	}
+      	})(markerReception));
 	
 }
 

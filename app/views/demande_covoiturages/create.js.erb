@@ -1,4 +1,8 @@
 /* render the demand */
 $("#demandes").append('<%= escape_javascript(render(@demande_covoiturage)) %>');
-
-
+//reset form
+//$("#new_demande_covoiturage")[0].reset();
+//hide form
+$("#new_demande_covoiturage").hide();
+//show demander button
+$("#demander-button").show();

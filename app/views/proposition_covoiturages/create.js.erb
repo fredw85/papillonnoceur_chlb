@@ -1,4 +1,9 @@
 /* render the proposition */
 $("#propositions").append('<%= escape_javascript(render(@proposition_covoiturage)) %>');
-
+//reset form
+//$("#new_proposition_covoiturage")[0].reset();
+//hide form
+$("#new_proposition_covoiturage").hide();
+//show proposer button
+$("#proposer-button").show();
 

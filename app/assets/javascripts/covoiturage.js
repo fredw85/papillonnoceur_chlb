@@ -97,9 +97,9 @@ $(document).ready(function() {
 		$(this).hide();
 	});
 	$("#annuler-proposer-button").click(function() {
-		//$("#new_proposition_covoiturage")[0].reset();
 		$("#proposer-form").hide();
 		$("#proposer-button").show();
+		//$("#new_proposition_covoiturage")[0].reset();
 	})
 	$("#demander-button").click(function() {
 		$("#demander-form, #annuler-demander-button").show();
@@ -107,8 +107,8 @@ $(document).ready(function() {
 	});
 	$("#annuler-demander-button").click(function() {
 		$("#demander-form").hide();
-		$(this).hide();
-		$("#demander-form").hide();
+		$("#demander-button").show();
+		//$("#new_demande_covoiturage")[0].reset();
 	})
 	//validate forms
 	if($("#new_proposition_covoiturage, #new_demande_covoiturage").length>1) {
@@ -116,6 +116,7 @@ $(document).ready(function() {
 	}
 	//reset forms
 	$("form").bind('reset', function() {
-		//$(this)
+		$(this).children("div.clearfix").removeClass('error ok');
+		$(this).children("span.help-inline").text('');
 	});
 });

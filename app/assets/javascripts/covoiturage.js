@@ -95,7 +95,6 @@ $(document).ready(function() {
 	$("#proposer-button").click(function() {
 		$("#proposer-form, #annuler-proposer-button").show();
 		$(this).hide();
-		$("#demander-form").show();
 	});
 	$("#annuler-proposer-button").click(function() {
 		//$("#new_proposition_covoiturage")[0].reset();
@@ -109,6 +108,7 @@ $(document).ready(function() {
 	$("#annuler-demander-button").click(function() {
 		$("#demander-form").hide();
 		$(this).hide();
+		$("#demander-form").hide();
 	})
 	//validate forms
 	if($("#new_proposition_covoiturage, #new_demande_covoiturage").length>1) {

@@ -198,11 +198,11 @@ function initializeLogement() {
     	
     	google.maps.event.addListener(marker, 'click', (function(marker) {
         	return function() {
-        		infowindowContent = "<address><strong>"+logement.name+"</strong><br>";
+        		infowindowContent = "<div class='infowindow-text'><address><strong>"+logement.name+"</strong><br>";
     			infowindowContent += logement.address+"<br>";
     			if(logement.telephone !== undefined){infowindowContent += logement.telephone+"<br>";}
     			if(logement.web !== undefined){infowindowContent += "<a href='http://"+logement.web+"'>"+logement.web+"</a>";}
-    			infowindowContent += "</address>";
+    			infowindowContent += "</address></div>";
           		infowindow.setContent(infowindowContent);
           		infowindow.open(map, marker);
         	}
@@ -216,10 +216,10 @@ function initializeLogement() {
 	});
 	google.maps.event.addListener(markerEglise, 'click', (function(markerEglise) {
         	return function() {
-        		infowindowContent = "<address><strong>"+eglise.name+"</strong><br>";
+        		infowindowContent = "<div class='infowindow-text'><address><strong>"+eglise.name+"</strong><br>";
     			infowindowContent += "Messe à <br>";
     			infowindowContent += eglise.address+"<br>";
-    			infowindowContent += "</address>";
+    			infowindowContent += "</address></div>";
           		infowindow.setContent(infowindowContent);
           		infowindow.open(map, markerEglise);
         	}
@@ -232,10 +232,10 @@ function initializeLogement() {
 	});
 	google.maps.event.addListener(markerReception, 'click', (function(markerReception) {
         	return function() {
-        		infowindowContent = "<address><strong>"+reception.name+"</strong><br>";
+        		infowindowContent = "<div class='infowindow-text'><address><strong>"+reception.name+"</strong><br>";
     			infowindowContent += "Réception à <br>";
     			infowindowContent += reception.address+"<br>";
-    			infowindowContent += "</address>";
+    			infowindowContent += "</address></div>";
           		infowindow.setContent(infowindowContent);
           		infowindow.open(map, markerReception);
         	}

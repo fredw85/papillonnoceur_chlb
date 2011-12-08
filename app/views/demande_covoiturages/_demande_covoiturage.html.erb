@@ -1,0 +1,27 @@
+
+	<div class="proposition">
+		
+		<div class="proposition-important">
+			<div class="depart">
+				<h4><span class="darker">Départ:</span> <%= demande_covoiturage.depart %></h4> 
+			</div>
+		</div>
+		<div class="proposition-contact">
+			<div class="email">
+				<h4><%= mail_to demande_covoiturage.email, "Envoyer un email" %></h4>
+			</div>
+			
+			<div class="telephone">
+				<h4><%= demande_covoiturage.telephone %></h4>
+			</div>
+		</div>
+		<div class="proposition-annexe">
+			<span class="name">
+				Demandé par <strong><%= demande_covoiturage.name %></strong>
+			</span>
+			<span class="supprimer">
+				<%= link_to "Supprimer", demande_covoiturage, :method => :delete, :remote => true, :confirm => "Etes-vous sûr(e) ?", :title => "Supprimer la demande" %>
+			</span>
+		</div>
+	</div>
+

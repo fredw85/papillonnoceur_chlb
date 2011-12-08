@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111130222548) do
+ActiveRecord::Schema.define(:version => 20111208024315) do
+
+  create_table "demande_covoiturages", :force => true do |t|
+    t.string   "depart"
+    t.string   "name"
+    t.string   "email"
+    t.string   "telephone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "proposition_covoiturages", :force => true do |t|
     t.string   "depart"

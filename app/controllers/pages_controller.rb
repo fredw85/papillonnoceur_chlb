@@ -19,6 +19,8 @@ class PagesController < ApplicationController
     @title = "Covoiturage"
     @proposition_covoiturages = PropositionCovoiturage.all
     @proposition_covoiturage = PropositionCovoiturage.new
+    @demande_covoiturages = DemandeCovoiturage.all
+    @demande_covoiturage = DemandeCovoiturage.new
   end
 
   def logement

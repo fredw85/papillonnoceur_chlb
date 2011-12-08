@@ -1,5 +1,7 @@
 PapillonnoceurFirst::Application.routes.draw do
+
   resources :proposition_covoiturages#, :only => [:create,:update,:destroy]
+  resources :demande_covoiturages
 
   root :to => 'pages#accueil'
   match '/presentation', :to => 'pages#presentation'

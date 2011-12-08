@@ -1,0 +1,31 @@
+<%= form_for @demande_covoiturage, :remote => true, :validate => true do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="clearfix">
+    <%= f.label :depart, "Ville de départ" %>
+    <div class="input">
+      <%= f.text_field :depart, :class => "span3" %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :name, "Nom" %>
+    <div class="input">
+      <%= f.text_field :name, :class => "span3"  %>
+    </div>
+ </div>
+  <div class="clearfix">
+    <%= f.label :email %>
+    <div class="input">
+      <%= f.email_field :email, :class => "span3"  %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :telephone, "Téléphone" %>
+    <div class="input">
+      <%= f.telephone_field :telephone, :class => "span3"  %>
+    </div>
+  </div>
+  <div class="buttons">
+    <%= f.submit "Poster", :class => "btn primary" %>
+    <button id="annuler-demander-button" class="btn">Annuler</button>
+  </div>
+<% end %>

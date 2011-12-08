@@ -260,11 +260,33 @@ function calcRoute() {
 }
 
 $(document).ready(function() {
+	/*
+	trajet
+	*/
+	//generate map
 	if($("#map_trajet").length>0) {
 		initializeTrajet();
 	}
+	//request-itinerary
+	$("#form-trajet").submit(function() {
+		calcRoute();
+		return false;
+	});
+	//print button
+	$("#print-itinerary").click(function() {
+		window.print();
+		return false;
+	});
+	$("#request-itinerary").click(function() {
+		$("#print-itinerary").show();
+	});
+	/*
+	logement
+	*/
+	//generate map
 	if($("#map_logement").length>0) {
 		initializeLogement();
 	}
+	
 });
  

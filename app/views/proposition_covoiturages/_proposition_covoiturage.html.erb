@@ -1,22 +1,30 @@
 
 	<div class="proposition">
-		<div class="depart">
-			Départ: <%= proposition_covoiturage.depart %> 
+		
+		<div class="proposition-important">
+			<div class="depart">
+				<h4><span class="darker">Départ:</span> <%= proposition_covoiturage.depart %></h4> 
+			</div>
+			<div class="places">
+				<h4><span class="darker">Places:</span> <%= proposition_covoiturage.places %></h4>
+			</div>
 		</div>
-		<div class="places">
-			Places: <%= proposition_covoiturage.places %>
+		<div class="proposition-contact">
+			<div class="email">
+				<h4><%= mail_to proposition_covoiturage.email, "Envoyer un email" %></h4>
+			</div>
+			
+			<div class="telephone">
+				<h4><%= proposition_covoiturage.telephone %></h4>
+			</div>
 		</div>
-		<div class="name">
-			<%= proposition_covoiturage.name %>
-		</div>
-		<div class="Envoyer un email">
-			<%= mail_to proposition_covoiturage.email, "Email" %>
-		</div>
-		<div class="telephone">
-			<%= proposition_covoiturage.telephone %>
-		</div>
-		<div class="delete">
-			<%= link_to "Supprimer", proposition_covoiturage, :method => :delete, :remote => true, :confirm => "Etes-vous sûr(e) ?", :title => "Supprimer la proposition" %>
+		<div class="proposition-annexe">
+			<span class="name">
+				Proposé par <strong><%= proposition_covoiturage.name %></strong>
+			</span>
+			<span class="supprimer">
+				<%= link_to "Supprimer", proposition_covoiturage, :method => :delete, :remote => true, :confirm => "Etes-vous sûr(e) ?", :title => "Supprimer la proposition" %>
+			</span>
 		</div>
 	</div>
 

@@ -6,13 +6,14 @@
 		<h2>Trajet</h2>
 	</div>
 	<div class="row">
-		<div class="span10">
-			<form class="form-stacked" onsubmit="calcRoute();return false;">
+		<div class="span16">
+			<form id="form-trajet" class="form-stacked">
 				<div class="clearfix">
 					<label for="start">Entrez votre adresse de départ:</label>
 					<div class="input">
 						<input type="text" id="start" name="start" placeholder="Adresse" class="span5">
-						<input type="submit" class="btn primary" value="Afficher mon itinéraire">
+						<input type="submit" id="request-itinerary" class="btn primary" value="Afficher mon itinéraire">
+						<button id="print-itinerary" class="btn success">Imprimer les instructions</button>
 					</div>
 					
 				</div>
@@ -20,7 +21,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div id="map_trajet" class="span10" style="height:500px;"></div>
-		<div id="directionsPanel" class="span4" style="height:500px;"></div>
+		<div id="map_trajet" class="span10"></div>
+		<div id="directionsPanel" class="span4"></div>
 	</div>
 </div>

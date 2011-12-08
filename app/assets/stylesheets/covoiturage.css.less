@@ -1,20 +1,72 @@
 @import 'twitter/bootstrap/variables';
 @import 'twitter/bootstrap/mixins';
 
-.proposition {
-	border-bottom: 1px solid @blue;
-	border-top: 1px solid @blue;
-	display: block;
-	.depart {
-		float:left;
-		margin: 5px 10px 0 5px;
+form {
+	.clearfix {
+		margin-bottom:9px;
+	}
+	.input {
+		margin-left:128px;
 	}
 }
 
-#proposer-form {
-	display:none;
+label {
+	width:110px;
 }
 
-#annuler-button {
+.proposition {
+	
+	border-bottom: 1px solid @blue;
+	display: block;
+	margin-bottom:20px;
+	h4{line-height:22px;}
+	.darker {
+		color:@gray;
+	}
+	.proposition-important {
+		display:block;
+		float:left;
+		.depart {
+		}
+		.places {
+			clear:left;
+		}
+	}
+	.proposition-contact {
+		a,h4 {
+			color:@green;
+		}
+		display:block;
+		float:right;
+	}
+	.proposition-annexe {
+		display:block;
+		clear:both;
+		.name {
+			color:@blue;
+		}
+		.supprimer {
+			float:right;
+			padding-left:20px;
+			a {
+				color:@grayDark;
+			}
+		}
+	}
+}
+
+.buttons {
+	margin-top:10px;
+	text-align:center;
+}
+
+
+
+#proposer-form, #demander-form {
+	display:none;
+	margin-top:10px;
+}
+
+#annuler-proposer-button, #annuler-demander-button {
 	display:none;
 }

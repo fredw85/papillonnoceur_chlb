@@ -32,9 +32,9 @@ nav {
 	ul {
 		float:right;
 		li {
-			margin:0 5px 0 5px;
+			display: inline-block;
 			list-style-type: none;
-  			display: inline-block;
+			margin:0 5px 0 5px;
   		}
 	}
 }
@@ -55,12 +55,12 @@ nav {
 	}
 }
 
-.presentation, .trajet {
+.presentation, .trajet, .covoiturage {
 	background:url('/assets/transparency-dark.png');
+	color:@grayLight;
 	margin-top:50px;
 	padding:10px 10px 10px 10px;
-	color:@grayLight;
-	h2 {
+	h2,h4 {
 		color:@grayLighter;
 	}
 	label {
@@ -79,6 +79,20 @@ nav {
 ********** id **********
 ***********************/
 
+//trajet
+#directionsPanel {
+	height:auto;
+}
+#map_trajet {
+	height:400px;
+	margin-left:40px;
+}
+#print-itinerary {
+	display: none;
+}
+
+
+//accueil
 #messe {
 	margin-top:50px;
 }

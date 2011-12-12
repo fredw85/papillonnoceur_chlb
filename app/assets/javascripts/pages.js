@@ -163,10 +163,10 @@ function initializeTrajet() {
     });
     google.maps.event.addListener(markerEglise, 'click', (function(markerEglise) {
         	return function() {
-        		infowindowContent = "<address><strong>"+eglise.name+"</strong><br>";
+        		infowindowContent = "<div class='infowindow-text'><address><strong>"+eglise.name+"</strong><br>";
     			infowindowContent += "Messe à <br>";
     			infowindowContent += eglise.address+"<br>";
-    			infowindowContent += "</address>";
+    			infowindowContent += "</address></div>";
           		infowindow.setContent(infowindowContent);
           		infowindow.open(map, markerEglise);
         	}

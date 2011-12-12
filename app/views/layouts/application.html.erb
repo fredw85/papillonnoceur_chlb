@@ -23,20 +23,25 @@
 </head>
 
 <body>
-	<div class="container">
+  
+  <div class="container">
 
 		<%= render 'layouts/header' %>
+    
+      <% flash.each do |key, value| %>
+        <div class="alert-message <%= key %> fade in" data-alert="alert">
+          <a class="close" href="#">×</a>  
+          <%= value %>
+        </div>
+      <% end %>
 
-    <% flash.each do |key, value| %>
-      <div class="alert-message <%= key %> fade in" data-alert="alert">
-        <a class="close" href="#">×</a>  
-        <%= value %>
-      </div>
-    <% end %>
+    	<%= yield %>
 
-		<%= yield %>
-
+      <footer>
+        <p>Site réalisé par <a href="http://lancement.papillonnoceur.com">papillonnoceur.com</a> - ©2011 Papillon Noceur - <a href="http://mapicons.nicolasmollet.com">Maps Icons Collection</a> </p>
+      </footer>
 	</div>
+  
 
   <%= javascript_include_tag "application" %>
 

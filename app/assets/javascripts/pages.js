@@ -123,6 +123,13 @@ var logements = [
 			"chambres":4,
 			"lat":49.3347770,
 			"lng":1.76686280
+		},
+		{
+			"name":"Gîte de Nucourt",
+			"address":"17 Rue Hardeville, 95420 Nucourt",
+			"web":"https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dDgxU2NEMUg3bWptS3prZEhHWFFXOVE6MQ#gid=0",
+			"lat":49.160155,
+			"lng":1.856518
 		}
 	];
 var eglise={

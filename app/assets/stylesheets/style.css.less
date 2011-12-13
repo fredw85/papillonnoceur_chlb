@@ -10,13 +10,17 @@
 ***********************/
 
 body {
-	background:url('/assets/fabric_1.png')
+	background:url('/assets/whitey.png')
 }
 
 a {
 	font-size:14px;
 	color:@gray;
 	font-weight:bold;
+	&:active {
+		color:#00CCCC;
+		text-decoration:none;
+	}
 	&:hover {
 		color:@black;
 		text-decoration: none;
@@ -29,7 +33,17 @@ header {
 		//background:url('/assets/transparency-dark.png');
 		text-align:center;
 		padding:10px 0 10px 0;
-		color:#FA6900;
+		.elle {
+			color:#00CCCC;
+		}
+		.et {
+			color:@gray;
+			font-size:0.75em;
+		}
+		.lui {
+			color:#CC0000;
+		}
+		
 	}
 }
 
@@ -78,7 +92,7 @@ footer {
 		color:@grayDark;
 	}
 	a:hover > h3 {
-		color:#69D2E7;
+		color:#00CCCC;
 	}
 }
 

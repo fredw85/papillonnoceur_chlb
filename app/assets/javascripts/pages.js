@@ -125,7 +125,7 @@ var logements = [
 			"lng":1.76686280
 		},
 		{
-			"name":"Gîte de Nucourt",
+			"name":"Gîte de Nucourt - Solution spéciale Jeunes",
 			"address":"17 Rue Hardeville, 95420 Nucourt",
 			"web":"https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dDgxU2NEMUg3bWptS3prZEhHWFFXOVE6MQ#gid=0",
 			"lat":49.160155,

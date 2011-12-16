@@ -127,7 +127,7 @@ var logements = [
 		{
 			"name":"Gîte de Nucourt - Solution spéciale Jeunes",
 			"address":"17 Rue Hardeville, 95420 Nucourt",
-			"web":"https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dDgxU2NEMUg3bWptS3prZEhHWFFXOVE6MQ#gid=0",
+			"web":"docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dDgxU2NEMUg3bWptS3prZEhHWFFXOVE6MQ#gid=0",
 			"lat":49.160155,
 			"lng":1.856518
 		}
@@ -208,7 +208,7 @@ function initializeLogement() {
         		infowindowContent = "<div class='infowindow-text'><address><strong>"+logement.name+"</strong><br>";
     			infowindowContent += logement.address+"<br>";
     			if(logement.telephone !== undefined){infowindowContent += logement.telephone+"<br>";}
-    			if(logement.web !== undefined){infowindowContent += "<a href='http://"+logement.web+"'>"+logement.web+"</a>";}
+    			if(logement.web !== undefined){infowindowContent += "<a href='http://"+logement.web+"' target='_blank'>"+logement.web+"</a>";}
     			infowindowContent += "</address></div>";
           		infowindow.setContent(infowindowContent);
           		infowindow.open(map, marker);

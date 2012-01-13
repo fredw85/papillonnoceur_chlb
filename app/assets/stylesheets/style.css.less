@@ -1,4 +1,5 @@
 @import 'twitter/bootstrap/variables';
+@import 'twitter/bootstrap/mixins';
 
 @brownColor:#40312F;
 @pinkColor:#EB3B46;
@@ -28,10 +29,11 @@ a {
 }
 
 header {
+	//width:960px;
 	margin-top:10px;
+	//background:#fff;
 	h1 {
-		//background:url('/assets/transparency-dark.png');
-		text-align:center;
+		//text-align:center;
 		padding:10px 0 10px 0;
 		.elle {
 			color:#00CCCC;
@@ -39,6 +41,7 @@ header {
 		.et {
 			color:@gray;
 			font-size:0.75em;
+			//display:block;
 		}
 		.lui {
 			color:#CC0000;
@@ -48,7 +51,8 @@ header {
 }
 
 nav {
-	margin-top:24px;
+	//margin-top:59px;
+	margin-left:-20px;
 	ul {
 		li {
 			display: inline-block;
@@ -76,8 +80,9 @@ footer {
 
 .watup {
 	display:block;
-	background:url('/assets/bg2-940.jpg') no-repeat top center fixed;
-	min-height:758px;
+	background:url('/assets/bg2-940.jpg') no-repeat top center;
+	min-height:699px;
+	.box-shadow(7px 7px 21px rgba(0,0,0,0.33));
 }
 
 .horaires {

@@ -1,18 +1,19 @@
 
 <header>
 	<div class="row">
-		<div class="span6">
-			<a href="<%= root_path %>"><h1><span class="elle">Stéphanie</span> <span class="et">&amp;</span> <span class="lui">Renaud</span></h1>
+		<div class="span11">
+			<a href="<%= root_path %>"><h1><span class="elle">Marie-Caroline</span> <span class="et">&amp;</span> <span class="lui">Charles-Hubert</span></h1>
 		</div>
+	</div>
+	<div class="row">
 		<div class="span9">	
 			<nav>
 				<ul class="">
+					<li><%= link_to "Présentation", presentation_path %></li>
 					<li><%= link_to "Horaires", root_path %></li>
 					<li><%= link_to "Trajet", trajet_path %></li>
 					<li><%= link_to "Covoiturage", covoiturage_path %></li>
 					<li><%= link_to "Logement", logement_path %></li>
-					<li><%= link_to "Présentation", presentation_path %></li>
-					<li><%= link_to "Liste", liste_path %></li>
 				</ul>
 			</nav>
 		</div>

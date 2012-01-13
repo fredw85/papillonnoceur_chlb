@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20111208024315) do
 
   create_table "demande_covoiturages", :force => true do |t|
     t.string   "depart"
+    t.integer  "places"
     t.string   "name"
     t.string   "email"
     t.string   "telephone"

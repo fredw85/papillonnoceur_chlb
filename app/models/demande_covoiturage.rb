@@ -1,11 +1,16 @@
 # coding: utf-8
 class DemandeCovoiturage < ActiveRecord::Base
-	attr_accessible :depart, :name, :email, :telephone
+	attr_accessible :depart, :places, :name, :email, :telephone
 
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
 	validates :depart, 	:presence => true,
 						:length => { :maximum => 30 }
+
+	validates :places,	:presence => true,
+						:numericality => { 	:only_integer => true,
+											:greater_than => 1,
+											:lower_than => 7}
 
 	validates :name, 	:presence => true,
 						:length => { :maximum => 30 }

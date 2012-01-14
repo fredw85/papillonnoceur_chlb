@@ -3,7 +3,7 @@
 
 @brownColor:#40312F;
 @pinkColor:#EB3B46;
-@greyColor:#595959;
+@grayColor:#595959;
 @blueishColor:#9DBDC6;
 
 /***********************
@@ -82,7 +82,16 @@ footer {
 	display:block;
 	background:url('/assets/bg2-940.jpg') no-repeat top center;
 	min-height:699px;
-	.box-shadow(7px 7px 21px rgba(0,0,0,0.33));
+    -moz-box-shadow: @gray 0 0 10px 0;
+    -webkit-box-shadow: @gray 0 0 10px 0;
+    -o-box-shadow: @gray 0 0 10px 0;
+    box-shadow: @gray 0 0 10px 0;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
 }
 
 .horaires {
@@ -91,6 +100,7 @@ footer {
 
 .info-mariage {
 	background:url('/assets/bg-light-transparent.png');
+   .border-radius(5px);
 	padding:18px 10px 0 10px;
 	h1, h2 {
 		color:@black;

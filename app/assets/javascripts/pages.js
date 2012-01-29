@@ -31,7 +31,9 @@ var logements = [
 	{"type":"Gîte","name":"La Folinière","rue":"","cp":"14170","ville":"Berville l'Oudon","chambres":"2p","web":"","telephone":"02 31 20 38 53","email":"","address":" 14170 Berville l'Oudon","lat":49.005814,"lng":-0.010462},
 	{"type":"Gîte","name":"Manoir de la Tremblaye","rue":"","cp":"14340","ville":"Notre Dame de Livaye","chambres":"4p","web":"","telephone":"02 31 63 05 62 / 04 22 01 47 72","email":"","address":" 14340 Notre Dame de Livaye","lat":49.1144869,"lng":0.039327},
 	{"type":"Gîte","name":"Le Champ Roger Le Clos Saint Anne Englesqueville 14340 Cambremer","rue":"","cp":"14340","ville":"Cambremer","chambres":"4p","web":"","telephone":"02 31 63 04 20 / 06 79 83 68 57 / 06 79 83 68 50","email":"","address":" 14340 Cambremer","lat":49.150643,"lng":0.048774},
-	{"type":"Gîte","name":"Les Marronniers","rue":"4235 Route d'Engleasqueville","cp":"14340","ville":"Cambremer","chambres":"6p","web":"","telephone":"02 31 63 08 28 ","email":"","address":"4235 Route d'Engleasqueville 14340 Cambremer","lat":49.150643,"lng":0.048774}
+	{"type":"Gîte","name":"Les Marronniers","rue":"4235 Route d'Engleasqueville","cp":"14340","ville":"Cambremer","chambres":"6p","web":"","telephone":"02 31 63 08 28 ","email":"","address":"4235 Route d'Engleasqueville 14340 Cambremer","lat":49.150643,"lng":0.048774},
+	{"type":"Hotel","nom":"Hôtel de la poste","rue":"38 rue George Clémenceau","cp":"14700","ville":"Falaise","chambres":"17","web":"","telephone":"02 31 90 13 14","email":"","adresse":"38 rue George Clémenceau 14700 Falaise","lat":48.896761,"lng":0.114434},
+	{"type":"Gite","nom":"M et Mme Huet","rue":"La Vignerie","cp":"14340","ville":"Saint Laurent du mont","chambres":"6p","web":"","telephone":"02 31 63 08 65","email":"","adresse":"La Vignerie 14340 Saint Laurent du mont","lat":49.147229,"lng":0.026865},
 ];
 
 var eglise={
